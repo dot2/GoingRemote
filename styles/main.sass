@@ -1,0 +1,63 @@
+@import 'LandingPage'
+@import 'var'
+//----STYLES------------------
+html,body
+    font-size: 14px
+header
+    background:
+        image: url(../images/beach-header.png)
+        repeat: no-repeat
+        size: cover
+        position: center
+    height: 30vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    h1
+        font:
+            family: $font-main
+            size: 5rem
+        margin: 0
+        text-align: center
+        color: #fff
+.title
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    img
+        width: 30px
+        height: 30px
+        padding: 0
+        margin: 0
+        margin-top: 15px
+        margin-left: 15px
+.nav
+    margin-top: 20px
+    max-width: 800px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    a
+        text-decoration: none
+        color: inherit
+    .main-btn
+        span
+            font:
+                family: $font-main
+                size: 1.5rem
+                weight: 200
+        margin: 0 25px 0 25px
+        cursor: pointer
+        padding: 2px 0
+        color: #fff
+        width: 100px
+        border-radius: 20px
+        text-align: center
+    #jobs
+        background-color: $blue
+    #places
+        background-color: $purple
+    #articles
+        background-color: $red
