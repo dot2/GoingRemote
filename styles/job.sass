@@ -1,0 +1,49 @@
+@import 'var'
+
+.job-list
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+.job
+    max-width: 800px
+    height: 80px
+    border: solid
+    border-color: $gray
+    border-width: thin
+    width: 100%
+    position: relative
+    .company-img
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: #f0f0f0
+        height: 100%
+        width: 70px
+        img
+            width: 62px
+    .job-title
+        position: absolute
+        font:
+            size: 1.4rem
+            family: $font-main
+        top: 10px
+        left: 80px
+    .job-company
+        position: absolute
+        font:
+            size: 1.2rem
+            family: $font-main
+        color: #909090
+        bottom: 10px
+        left: 80px
+    .apply
+        position: absolute
+        right: 10px
+        top: 10px
+        bottom: 10px
+        width: 40px
+        background-color: $blue
+        span
+            color: #fff
+            font-size: 1rem
