@@ -50,15 +50,47 @@
     bottom: 10px;
     left: 80px; }
   .job .apply {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    bottom: 10px;
-    width: 40px;
+    border-radius: 30px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+    width: 60px;
     background-color: #2B90D9; }
     .job .apply span {
       color: #fff;
-      font-size: 1rem; }
+      font-size: 1rem;
+      font-family: "Titillium Web", sans-serif; }
+
+.wrapper {
+  width: 100%; }
+
+.summary {
+  font-family: "Titillium Web", sans-serif;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px; }
+  .summary h1 {
+    margin: 0;
+    padding: 0; }
+  .summary .post-job {
+    padding: 0;
+    margin: 0;
+    background-color: #2B90D9;
+    color: #fff;
+    width: 100px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-left: 10px; }
 
 html, body {
   font-size: 14px; }
