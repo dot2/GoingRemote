@@ -1,0 +1,19 @@
+{
+  "name": "goingremote",
+  "version": "1.0.0",
+  "description": "A new project for digital nomads.",
+  "main": "goingremote.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dot2/GoingRemote.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dot2/GoingRemote/issues"
+  },
+  "homepage": "https://github.com/dot2/GoingRemote#readme"
+}

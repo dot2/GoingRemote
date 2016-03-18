@@ -5,4 +5,6 @@ template(name="JobBoard")
             .post-job
                 span Post a job
         include ./job.jade
+        {{> reactiveTable collections=jobs}}
+        
             
