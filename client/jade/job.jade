@@ -1,8 +1,10 @@
-.job-list
-    .job
-        .company-img
-            img(src="images/twitter.png")
-        span(class="job-title") Front-End Developer
-        span(class="job-company") Twitter
-        .apply
-            span Apply
+template(name="job")
+    .job-list
+        .job
+            .post-date
+                {{date}}
+            span(class="job-title") {{title}}
+            span(class="job-company") {{company}}
+            .apply
+                a(href="https://weworkremotely.com{{url}}" target="_blank")    
+                    span Apply

@@ -1,6 +1,9 @@
 
 <template name="job">
   <div class="job-list">
-    <div class="job"><img src="images/twitter.png"/><span class="job-title">Front-End Developer</span><span class="job-company">Twitter</span></div>
+    <div class="job">
+      <div class="post-date">{{date}}</div><span class="job-title">{{title}}</span><span class="job-company">{{company}}</span>
+      <div class="apply"><a href="https://weworkremotely.com{{url}}" target="_blank">   <span>Apply</span></a></div>
+    </div>
   </div>
 </template>

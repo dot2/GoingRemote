@@ -1,10 +1,12 @@
 template(name="JobBoard")
-    .wrapper
-        .summary
-            h1 Reach remote workers across the globe.
-            .post-job
-                span Post a job
-        include ./job.jade
-        {{> reactiveTable collections=jobs}}
-        
+    body
+        .wrapper
+            .summary
+                h1 Reach remote workers across the globe.
+                .post-job
+                    span Post a job
+            {{#each jobs}}
+            {{> job}}
+            {{/each}}
+            
             
