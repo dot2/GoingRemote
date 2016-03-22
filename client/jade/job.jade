@@ -1,10 +1,10 @@
 template(name="job")
     .job-list
         .job
-            .post-date
-                {{date}}
+            //- .post-img
+            //-     img(src="{{homeUrl}}{{image}}")
             span(class="job-title") {{title}}
             span(class="job-company") {{company}}
             .apply
-                a(href="https://weworkremotely.com{{url}}" target="_blank")    
+                a(href="{{homeUrl}}{{url}}" target="_blank")    
                     span Apply
