@@ -1,0 +1,11 @@
+
+<template name="ArticleBoard">
+  <div class="container summary">
+    <h1>Latest Articles</h1>
+    <div class="wrapper">
+      {{#each articles}}
+      {{> article}}
+      {{/each}}
+    </div>
+  </div>
+</template>

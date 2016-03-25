@@ -1,0 +1,9 @@
+template(name="ArticleBoard")
+    .container.summary
+        h1 Latest Articles
+        .wrapper
+            {{#each articles}}
+            {{> article}}
+            {{/each}}
+                
+            
