@@ -3,8 +3,9 @@ template(name="ArticleBoard")
         .summary
             h1 Latest Articles
         .grid
+            {#if Template.subscriptionsReady}}
             {{#each articles}}
             {{> article}}
             {{/each}}
-                    
+            {{/if}}    
             

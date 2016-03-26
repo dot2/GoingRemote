@@ -40,7 +40,7 @@ Meteor.startup(function () {
                 if (jobAttribues.url && jobWithSameLink) {
                     throw new Meteor.Error(302, 'This link is already used', jobWithSameLink._id);
                 }
-                Jobs.insert(jobAttribues);
+                // Jobs.insert(jobAttribues);
             }
 
 

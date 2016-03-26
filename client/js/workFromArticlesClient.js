@@ -10,3 +10,10 @@ Template.ArticleBoard.helpers({
         return Articles.find({});
     }
 });
+
+Template.ArticleBoard.onCreated(function () {
+    var self= this;
+    self.autorun(function() {
+        self.subscribe('articles');
+    });
+});

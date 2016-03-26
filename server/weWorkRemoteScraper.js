@@ -20,13 +20,15 @@
                    //gets the url for the job post
                    var url = a.attr('href');
                    var homeUrl = 'https://weworkremotely.com';
+                   var time = new Date();
                    //gathers data to push to array
                    var metadata = {
                        date: date,
                        title: title,
                        company: company,
                        url: url,
-                       homeUrl: homeUrl
+                       homeUrl: homeUrl,
+                       time: time
                    };
                    jobResult.push(metadata);
                    //insert metadata into mongodb to display to user
@@ -42,7 +44,8 @@
                            title: jobPost.title,
                            company: jobPost.company,
                            date: jobPost.date,
-                           homeUrl: jobPost.homeUrl
+                           homeUrl: jobPost.homeUrl,
+                           time: jobPost.time
                    };
                    //checks to see if job is already in db based on url
                    var jobWithSameLink = Jobs.findOne({url: jobAttribues.url});
@@ -57,7 +60,7 @@
                //^End of for loop
                return LatestJob;
            }
-           //^End of getJob Function
+           //^End of getJob Function           
        });
        //^End of Meteor Method
    });

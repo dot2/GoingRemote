@@ -6,15 +6,12 @@ if (error) {
 console.log(result);
 });
 
-// Meteor.call("last_action",function(err,result){
-//     console.log(result); } );
-// Meteor.call('getJobData', function(error, result) {
-//     if (error) {
-//         console.log("error", error);
-//     }
-//
-//     console.log(result);
-// });
+Template.JobBoard.onCreated(function () {
+    var self= this;
+    self.autorun(function() {
+        self.subscribe('jobs');
+    });
+});
 
 Template.JobBoard.helpers({
     // jobs: function() {

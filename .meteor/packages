@@ -41,5 +41,3 @@ alethes:pages
 standard-minifier-css
 standard-minifier-js
 http
-autopublish
-insecure
