@@ -11,13 +11,11 @@ Template.JobBoard.onCreated(function () {
     self.autorun(function() {
         self.subscribe('jobs');
     });
+
 });
 
 Template.JobBoard.helpers({
-    // jobs: function() {
-    //     return Jobs.find().fetch();
-    // }
     jobs: ()=> {
-    return Jobs.find({});
-}
+        return Jobs.find({});
+    }
 });

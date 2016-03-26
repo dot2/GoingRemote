@@ -1,7 +1,8 @@
  Meteor.startup(function () {
        //init cheerio
         var cheerio = require('cheerio');
-
+        var count = Jobs.count(jobAttribues);
+        console.log(count);
        Meteor.methods({
            getJob: function () {
                result = Meteor.http.get("https://weworkremotely.com/categories/2-programming/jobs#intro");
