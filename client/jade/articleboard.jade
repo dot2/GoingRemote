@@ -1,9 +1,10 @@
 template(name="ArticleBoard")
-    .container.summary
-        h1 Latest Articles
-        .wrapper
+    .wrapper
+        .summary
+            h1 Latest Articles
+        .grid
             {{#each articles}}
             {{> article}}
             {{/each}}
-                
+                    
             

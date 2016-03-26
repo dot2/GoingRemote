@@ -1,8 +1,10 @@
 
 <template name="ArticleBoard">
-  <div class="container summary">
-    <h1>Latest Articles</h1>
-    <div class="wrapper">
+  <div class="wrapper">
+    <div class="summary">
+      <h1>Latest Articles</h1>
+    </div>
+    <div class="grid">
       {{#each articles}}
       {{> article}}
       {{/each}}
