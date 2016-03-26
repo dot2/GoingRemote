@@ -1,5 +1,8 @@
 @import 'var'
-
+.job-info
+    width: 80%
+.job-apply
+    width: 20%
 .job-list
     width: 100%
     margin: 8px
@@ -8,11 +11,11 @@
     justify-content: center
 .job
     max-width: 1000px
-    height: 80px
+    height: 100px !important
     border: solid
     border-color: $gray
     border-width: thin
-    width: 100%
+    width: 90%
     position: relative
     .post-date
         display: flex
@@ -38,6 +41,8 @@
             family: $font-main
         top: 10px
         left: 20px
+        width: 85%
+        text-align: left
     .job-company
         position: absolute
         font:
@@ -52,9 +57,9 @@
         justify-content: center
         position: absolute
         border-radius: 30px
-        right: 20px
-        top: 20px
-        bottom: 20px
+        right: 10px !important
+        top: 30px !important
+        bottom: 30px !important
         width: 100px
         background-color: $blue
         transition: all 0.2s ease-in-out
