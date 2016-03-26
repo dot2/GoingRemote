@@ -37,10 +37,11 @@ Meteor.startup(function () {
                 };
                 //checks to see if job is already in db based on url
                 var jobWithSameLink = Jobs.findOne({url: jobAttribues.url});
-                if (jobAttribues.url && jobWithSameLink) {
+                var url = jobAttribues.url;
+                if (url && jobAttribues.url && jobWithSameLink) {
                     throw new Meteor.Error(302, 'This link is already used', jobWithSameLink._id);
                 }
-                // Jobs.insert(jobAttribues);
+                Jobs.insert(jobAttribues);
             }
 
 

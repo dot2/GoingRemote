@@ -60,7 +60,7 @@
                //^End of for loop
                return LatestJob;
            }
-           //^End of getJob Function           
+           //^End of getJob Function
        });
        //^End of Meteor Method
    });
