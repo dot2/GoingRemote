@@ -5,9 +5,12 @@
       <div class="summary">
         <h1>Reach remote workers across the globe.</h1><a href="/postjob">
           <div class="post-job"><span>Post a job</span></div></a>
-      </div>{{#each jobs}}
+      </div>{{#if Template.subscriptionsReady}}
+      {{#each jobs}}
       {{> job}}
       {{/each}}
+      {{else}}
+      <div class="loading"><span>Loading</span></div>{{/if}}
     </div>
   </body>
 </template>
