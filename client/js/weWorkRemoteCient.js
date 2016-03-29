@@ -16,6 +16,10 @@ Template.JobBoard.onCreated(function () {
 
 Template.JobBoard.helpers({
     jobs: ()=> {
-        return Jobs.find({});
+        return Jobs.find({}, {sort: {createdAt: -1}});
     }
 });
+
+// Template.JobBoard. = function() {
+//         return Jobs.find().fetch().reverse();
+// };
