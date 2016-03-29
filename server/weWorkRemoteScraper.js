@@ -31,9 +31,8 @@
                    //insert metadata into mongodb to display to user
                    // Jobs.insert(metadata);
                    // return metadata;
-                   console.log(jobResult);
                });
-               //display only 100 job posts
+               //display only 1000 job posts
                for (var i = 0; i < 1000; i++) {
                    var jobPost = jobResult[i];
 

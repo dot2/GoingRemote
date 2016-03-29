@@ -14,7 +14,9 @@ Meteor.startup(function () {
                 var image = a.find('img').attr('src');
                 var url = a.attr('href');
                 var homeUrl = 'https://authenticjobs.com';
+                var createdAt =  new Date();
                 var metadata = {
+                    createdAt: createdAt,
                     title: title,
                     company: company,
                     url: url,
@@ -24,10 +26,11 @@ Meteor.startup(function () {
                 };
                 jobResult.push(metadata);
             });
-            for (var i = 0; i <1000; i++) {
+            for (var i = 0; i <2000; i++) {
                 var jobPost = jobResult[i];
 
                 var jobAttribues = {
+                    createdAt: jobPost.createdAt,
                     url: jobPost.url,
                     title: jobPost.title,
                     company: jobPost.company,
@@ -41,7 +44,12 @@ Meteor.startup(function () {
                 if (url && jobAttribues.url && jobWithSameLink) {
                     throw new Meteor.Error(302, 'This link is already used', jobWithSameLink._id);
                 }
-                Jobs.insert(jobAttribues);
+                //checks to see if position is remote
+                var jobNotRemote = Jobs.findOne({location: jobAttribues.location});
+                if(jobAttribues.location === "Anywhere") {
+                    Jobs.insert(jobAttribues);
+                }
+                // Jobs.insert(jobAttribues);
             }
 
 

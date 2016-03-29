@@ -11,35 +11,58 @@ Jobs.allow({
 JobSchema = new SimpleSchema({
     title: {
         type: String,
+        optional: true,
         label: 'Title'
     },
     company: {
         type: String,
+        optional: true,
         label: "Company"
     },
     jobDescription: {
         type: String,
+        optional: true,
         label: "Job Description"
     },
     applyInstruction: {
         type: String,
+        optional: true,
         label: "How do people apply"
     },
     companyEmail: {
         type: String,
-        label: "company email"
+        optional: true,
+        label: "company email",
+        autoform: {
+            afFieldInput: {
+                type: "email"
+            }
+        }
     },
     tags: {
         type: String,
+        optional: true,
         label: "Tags"
     },
     homeUrl: {
         type: String,
-        label: "HomeUrl"
+        optional: true,
+        label: "HomeUrl",
+        autoform: {
+            afFieldInput: {
+                type: "url"
+            }
+        }
     },
     url: {
         type: String,
-        label: "url"
+        optional: true,
+        label: "url",
+        autoform: {
+            afFieldInput: {
+                type: 'url'
+            }
+        }
     },
     createdAt: {
         type: Date,
