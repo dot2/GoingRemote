@@ -50,6 +50,13 @@
                            'This link as already been posted',
                                jobWithSameLink._id);
                    }
+                //    if(jobAttribues.url === "#intro ") {
+                //        throw new Meteor.Error(302,
+                //         'This is a blank post');
+                //    } else {
+                //        Jobs.insert(jobAttribues);
+                //    }
+
                    //inserts new jobs into db
                    Jobs.insert(jobAttribues);
                }
