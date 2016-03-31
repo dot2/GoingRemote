@@ -88,7 +88,7 @@
     font-family: "Titillium Web", sans-serif;
     top: 15px;
     left: 20px;
-    width: 85%;
+    width: 70%;
     text-align: left; }
   .job .job-company {
     position: absolute;
@@ -263,7 +263,8 @@
   .summary {
     width: 100%; }
     .summary h1 {
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      text-align: center !important; }
 
   .wrapper {
     margin-top: 0; }
@@ -271,7 +272,7 @@
   .job-title {
     font-size: 1.3rem !important;
     left: 5px !important;
-    word-wrap: break-word;
+    overflow: hidden !important;
     width: 95%;
     text-align: left;
     top: 10px !important; }
@@ -285,18 +286,15 @@
     width: 100% !important; }
 
   .apply {
-    top: 0px !important;
-    right: 0px !important;
-    background-color: transparent !important;
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 0 !important; }
+    width: 25% !important;
+    border-radius: 0 !important;
+    top: 20px !important;
+    bottom: 20px !important;
+    right: 5px !important; }
     .apply a {
       right: 0 !important;
       top: 0 !important;
       bottom: 0 !important; }
-      .apply a span {
-        display: none; }
 
   .job.apply:hover {
     box-shadow: 0px 0px 0px #fff !important; }
