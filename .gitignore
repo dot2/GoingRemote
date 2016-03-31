@@ -52,3 +52,5 @@ settings.json
 
 # general swp files from vim
 *.swp
+###robotos###
+.txt
