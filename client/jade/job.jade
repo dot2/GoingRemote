@@ -2,9 +2,11 @@ template(name="job")
     .job-list
         .job
             .job-info
+                .date-wrapper
+                    span(class="date") {{formatDate createdAt}}
                 span(class="job-title") {{title}}
                 span(class="job-company") {{company}}
             .job-apply
                 .apply
                     a(href="{{homeUrl}}{{url}}" target="_blank")    
-                        span Apply
+                         span Apply

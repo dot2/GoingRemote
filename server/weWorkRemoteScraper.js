@@ -15,7 +15,7 @@
                    //gets company image
                    var company = a.find('.company').text();
                    //get date posted
-                   var createdAt =  new Date();
+                   var createdAt = new Date();
                    //gets the url for the job post
                    var url = a.attr('href');
                    var homeUrl = 'https://weworkremotely.com';

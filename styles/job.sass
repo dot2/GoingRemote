@@ -9,6 +9,19 @@
     display: flex
     align-items: center
     justify-content: center
+.date-wrapper
+    width: 80px
+    height: 99px
+    border-right: solid
+    border-color: $gray
+    border-width: thin
+    display: flex
+    justify-content: center
+    align-items: center
+    .date
+        font-size: 1.2rem
+        text-align: center
+        color: $blue
 .job
     max-width: 1000px
     height: 100px !important
@@ -26,7 +39,7 @@
         border-color: $gray
         border-width: thin
         color: $blue
-        font-size: 1.4rem
+        font-size: 1.2rem
         font-family: $font-main
         height: 100%
         width: 70px
@@ -39,18 +52,21 @@
         font:
             size: 1.2rem
             family: $font-main
-        top: 10px
-        left: 20px
+        top: 20px
+        left: 85px
         width: 70%
         text-align: left
+        // text-overflow: hidden
+        // white-space: nowrap
+        // overlow: hidden
     .job-company
         position: absolute
         font:
             size: 1.1rem
             family: $font-main
         color: #909090
-        bottom: 10px
-        left: 20px
+        bottom: 20px
+        left: 85px
     .apply
         display: flex
         align-items: center
@@ -63,6 +79,8 @@
         width: 100px
         background-color: $blue
         transition: all 0.2s ease-in-out
+        i
+            color: #fff
         span
             color: #fff
             font-size: 1.2rem

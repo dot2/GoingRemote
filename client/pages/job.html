@@ -2,7 +2,9 @@
 <template name="job">
   <div class="job-list">
     <div class="job">
-      <div class="job-info"><span class="job-title">{{title}}</span><span class="job-company">{{company}}</span></div>
+      <div class="job-info">
+        <div class="date-wrapper"><span class="date">{{formatDate createdAt}}</span></div><span class="job-title">{{title}}</span><span class="job-company">{{company}}</span>
+      </div>
       <div class="job-apply">
         <div class="apply"><a href="{{homeUrl}}{{url}}" target="_blank">   <span>Apply</span></a></div>
       </div>
