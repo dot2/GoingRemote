@@ -3,5 +3,5 @@ Meteor.publish('articles', function() {
 });
 
 Meteor.publish('jobs', function() {
-    return Jobs.find({});
+    return Jobs.find({ }, {sort: {createdAt: -1}, limit: 60});
 });
