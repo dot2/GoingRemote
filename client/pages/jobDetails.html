@@ -8,7 +8,10 @@
       <h1>{{job.title}}</h1><span class="underline">Company</span>
       <h2>{{job.company}}</h2>
     </div>
-    <div class="applyTo"><a href="{{job.homeUrl}}{{job.url}}" target="_blank">
-        <p>Apply</p></a></div>
+    <a href="{{job.homeUrl}}{{job.url}}" target="_blank">
+        <div class="applyTo">
+            <p>Apply</p>
+        </div>
+    </a>
   </div>
 </template>
