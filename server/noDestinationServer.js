@@ -22,7 +22,6 @@ Meteor.startup(function () {
                 var image = a.find('.entry-content > a > img').attr('src');
                 //gets article url
                 var url = a.find('.entry-content > a').attr('href');
-                console.log(url);
                 //gathers all data to push to array
                 var metadata = {
                     url: url,
