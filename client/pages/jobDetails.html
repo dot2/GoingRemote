@@ -1,0 +1,14 @@
+
+<template name="JobDetails">
+  <div class="postedOn"><span class="underline">Posted On</span>
+    <p>{{formatDate createdAt}}</p>
+  </div>
+  <div class="jobDetailsWrapper">
+    <div class="jobDetails"><span class="underline">Position</span>
+      <h1>{{job.title}}</h1><span class="underline">Company</span>
+      <h2>{{job.company}}</h2>
+    </div>
+    <div class="applyTo"><a href="{{job.homeUrl}}{{job.url}}" target="_blank"> 
+        <p>Apply</p></a></div>
+  </div>
+</template>

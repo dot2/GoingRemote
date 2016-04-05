@@ -1,0 +1,13 @@
+template(name="JobDetails")
+        .postedOn
+            span(class="underline") Posted On
+            p {{formatDate createdAt}}
+        .jobDetailsWrapper
+            .jobDetails
+                span(class="underline") Position
+                h1 {{job.title}}
+                span(class="underline") Company
+                h2 {{job.company}}
+            .applyTo
+                 a(href="{{job.homeUrl}}{{job.url}}" target="_blank") 
+                    p Apply

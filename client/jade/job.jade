@@ -8,5 +8,6 @@ template(name="job")
                 span(class="job-company") {{company}}
             .job-apply
                 .apply
-                    a(href="{{homeUrl}}{{url}}" target="_blank")    
+                    //- a(href="{{homeUrl}}{{url}}" target="_blank") 
+                    a(href="/jobpost/{{_id}}")   
                          span Apply
