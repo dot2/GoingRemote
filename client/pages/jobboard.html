@@ -6,11 +6,7 @@
         <h1>Reach remote workers across the globe.</h1><a href="/postjob">
           <div class="post-job"><span>Post a job</span></div></a>
       </div>
-      <div class="twitter-banner summary">
-          <span>Receive tweets when there is a new job post! </span>
-          <a href="https://twitter.com/goingremote" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @goingremote</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      </div>
+      {{>TwitterFollow}}
       {{#if Template.subscriptionsReady}}
       {{#each jobs}}
       {{> job}}
