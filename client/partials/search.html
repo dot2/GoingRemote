@@ -1,0 +1,18 @@
+<template name="Search">
+    <div class="group">
+        {{> EasySearch.Input index=jobIndex }}
+            <span class="bar"></span>
+            <label>Search Jobs</label>
+    </div>
+
+    {{#EasySearch.Each index=jobIndex}}
+        {{>job}}
+    {{/EasySearch.Each}}
+    {{> EasySearch.LoadMore index=jobIndex}}
+
+    {{#EasySearch.IfNoResults index=jobIndex}}
+        <div class="no-results">
+            <span>Sorry, no jobs fit that search =(</span>
+        </div>
+    {{/EasySearch.IfNoResults}}
+</template>

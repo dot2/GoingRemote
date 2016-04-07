@@ -4,9 +4,13 @@
     <p>{{formatDate createdAt}}</p>
   </div>
   <div class="jobDetailsWrapper">
-    <div class="jobDetails"><span class="underline">Position</span>
-      <h1>{{job.title}}</h1><span class="underline">Company</span>
+    <div class="jobDetails">
+        <span class="underline">Position</span>
+      <h1>{{job.title}}</h1>
+      <span class="underline">Company</span>
       <h2>{{job.company}}</h2>
+      <span class="underline">Summary</span>
+      <p>{{job.summaryData}}</p>
     </div>
     <a href="{{job.homeUrl}}{{job.url}}" target="_blank">
         <div class="applyTo">
