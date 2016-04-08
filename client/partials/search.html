@@ -10,6 +10,12 @@
     {{/EasySearch.Each}}
     {{> EasySearch.LoadMore index=jobIndex}}
 
+        {{#EasySearch.IfSearching index=jobIndex}}
+            <div class="loading">
+                <span>Fetching those awesome jobs now! =)</span>
+            </div>
+        {{/EasySearch.IfSearching}}
+
     {{#EasySearch.IfNoResults index=jobIndex}}
         <div class="no-results">
             <span>Sorry, no jobs fit that search =(</span>

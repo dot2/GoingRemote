@@ -12,13 +12,13 @@
       </a>
       </div>
       {{>TwitterFollow}}
-      {{>Search}}
-      <!-- {{#if Template.subscriptionsReady}}
+       <!-- {{>Search}} -->
+      {{#if Template.subscriptionsReady}}
       {{#each jobs}}
-      {{> job}}
+      {{>job}}
       {{/each}}
-      {{else}} -->
-      <!-- <div class="loading"><span>Loading</span></div>{{/if}} -->
+      {{else}}
+      <div class="loading"><span>Fetching those remote jobs =)</span></div>{{/if}}
     </div>
   </body>
 </template>
