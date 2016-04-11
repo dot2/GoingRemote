@@ -13,15 +13,21 @@
       </div>
       {{>TwitterFollow}}
        <!-- {{>Search}} -->
-       <ul id="remoteOk">
-           
-       </ul>
       {{#if Template.subscriptionsReady}}
       {{#each jobs}}
       {{>job}}
       {{/each}}
       {{else}}
-      <div class="loading"><span>Fetching those remote jobs =)</span></div>{{/if}}
+      <div class="loading">
+          <span>Fetching those remote jobs =)</span>
+          <div class="loading-spinner">
+              {{>spinner}}
+          </div>
+      </div>
+      {{/if}}
+      {{#if hasMoreJobs}}
+          <a class="load-more" href="#">Load More</a>
+      {{/if}}
     </div>
   </body>
 </template>

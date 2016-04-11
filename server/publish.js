@@ -3,7 +3,7 @@ Meteor.publish('articles', function() {
 });
 
 Meteor.publish('jobs', function() {
-    return Jobs.find({ }, {sort: {createdAt: -1}, limit: 60});
+    return Jobs.find({ }, {sort: {createdAt: -1}});
 });
 
 Meteor.publish('jobpostdetails',  function(id) {

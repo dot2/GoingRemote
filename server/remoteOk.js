@@ -4,7 +4,7 @@ SyncedCron.add({
     name: "get RemoteOk Jobs for DB",
 
     schedule: function(parser){
-        return parser.text('every  1 hours');
+        return parser.text('every  1 minutes');
     },
     job: function(){
         return Meteor.call("remoteOkJobs");
