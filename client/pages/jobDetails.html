@@ -2,6 +2,11 @@
     {{>TwitterShare}}
   <div class="postedOn"><span class="underline">Posted On</span>
     <p>{{formatDate createdAt}}</p>
+    <a href="{{job.homeUrl}}{{job.url}}" target="_blank">
+        <div class="applyTo">
+            <p>Apply</p>
+        </div>
+    </a>
   </div>
   <div class="jobDetailsWrapper">
     <div class="jobDetails">
@@ -10,12 +15,9 @@
       <span class="underline">Company</span>
       <h2>{{job.company}}</h2>
       <span class="underline">Summary</span>
-      <p>{{job.summaryData}}</p>
+      <div class="job-summary">
+          {{job.summary}}
+      </div>
     </div>
-    <a href="{{job.homeUrl}}{{job.url}}" target="_blank">
-        <div class="applyTo">
-            <p>Apply</p>
-        </div>
-    </a>
   </div>
 </template>

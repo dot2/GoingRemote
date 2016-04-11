@@ -1,5 +1,5 @@
 Meteor.publish('articles', function() {
-    return Articles.find({});
+    return Articles.find({}, {sort: {createdAt: -1}, limit: 15});
 });
 
 Meteor.publish('jobs', function() {

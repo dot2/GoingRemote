@@ -84,6 +84,11 @@ JobSchema = new SimpleSchema({
             }
         }
     },
+    summary: {
+        type: String,
+        optional: true,
+        label: "summary"
+    },
     createdAt: {
         type: Date,
         label: "Created At",
