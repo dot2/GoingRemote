@@ -4,7 +4,7 @@ SyncedCron.add({
     name: "get WeWorkRemotely Jobs for DB",
 
     schedule: function(parser){
-        return parser.text('every .5 minutes');
+        return parser.text('every 1 hours');
     },
     job: function(){
         return Meteor.call("getJob")
