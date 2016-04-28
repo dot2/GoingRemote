@@ -1,0 +1,13 @@
+<template name="paidJob">
+  <div class="job-list">
+    <div class="job featured">
+      <div class="job-info">
+        <div class="date-wrapper"><span class="date">{{formatDate createdAt}}</span></div><span class="job-title">{{title}}</span><span class="job-company">{{company}}</span>
+      </div>
+      <div class="job-apply">
+        <div class="apply"><a href="/jobpost/{{_id}}">  <span>Apply</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

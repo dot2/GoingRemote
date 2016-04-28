@@ -13,6 +13,18 @@
       </div>
       {{>TwitterFollow}}
        <!-- {{>Search}} -->
+      <div class="feat">
+           <h2>Featured</h2>
+      </div>
+       {{#if Template.subscriptionsReady}}
+       {{#each paidjobs}}
+       {{>paidJob}}
+       {{/each}}
+       {{else}}
+       <div class="loading">
+           <span>Loading the featured jobs!</span>
+       </div>
+       {{/if}}
       {{#if Template.subscriptionsReady}}
       {{#each jobs}}
       {{>job}}

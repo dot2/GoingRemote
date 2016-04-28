@@ -1,0 +1,104 @@
+PaidJobs = new Meteor.Collection('paidjobs');
+
+// JobIndex = new EasySearch.Index({
+//     collection: Jobs,
+//     fields: ['title', 'company'],
+//     engine: new EasySearch.Minimongo()
+// });
+
+// JobIndex = new EasySearch.Index({
+//     engine: new EasySearch.MongoDB({
+//         sort: function () {
+//             return {createdAt: -1};
+//         }
+//     }),
+//     collection: Jobs,
+//     fields: ['_id','title', 'company'],
+//     defaultSearchOption: {
+//         limit: 10
+//     }
+// });
+
+
+PaidJobs.allow({
+    insert: function(){
+        return true;
+    }
+});
+
+
+
+PaidJobsSchema = new SimpleSchema({
+    title: {
+        type: String,
+        optional: true,
+        label: 'Title'
+    },
+    company: {
+        type: String,
+        optional: true,
+        label: "Company"
+    },
+    jobDescription: {
+        type: String,
+        optional: true,
+        label: "Job Description"
+    },
+    applyInstruction: {
+        type: String,
+        optional: true,
+        label: "How do people apply"
+    },
+    companyEmail: {
+        type: String,
+        optional: true,
+        label: "company email",
+        autoform: {
+            afFieldInput: {
+                type: "email"
+            }
+        }
+    },
+    tags: {
+        type: String,
+        optional: true,
+        label: "Tags"
+    },
+    homeUrl: {
+        type: String,
+        optional: true,
+        label: "HomeUrl",
+        autoform: {
+            afFieldInput: {
+                type: "url"
+            }
+        }
+    },
+    url: {
+        type: String,
+        optional: true,
+        label: "url",
+        autoform: {
+            afFieldInput: {
+                type: 'url'
+            }
+        }
+    },
+    summary: {
+        type: String,
+        optional: true,
+        label: "summary"
+    },
+    createdAt: {
+        type: Date,
+        label: "Created At",
+        autoValue: function() {
+            return new Date();
+        },
+        autoform: {
+            type: "hidden"
+        }
+    }
+});
+
+PaidJobs.attachSchema(PaidJobsSchema);
