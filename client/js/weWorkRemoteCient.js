@@ -10,13 +10,17 @@ Template.JobBoard.onCreated(function () {
     var self= this;
     self.autorun(function() {
         self.subscribe('jobs');
+        self.subscribe('featured');
     });
-
 });
+
 
 Template.JobBoard.helpers({
     jobs: ()=> {
         return Jobs.find({}, {sort: {createdAt: -1}});
+    },
+    featured: ()=>{
+        return Featured.find({},{sort: {createdAt: -1}});
     }
 });
 

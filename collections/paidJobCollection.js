@@ -1,4 +1,4 @@
-PaidJobs = new Meteor.Collection('paidjobs');
+Featured = new Meteor.Collection('featured');
 
 // JobIndex = new EasySearch.Index({
 //     collection: Jobs,
@@ -20,7 +20,7 @@ PaidJobs = new Meteor.Collection('paidjobs');
 // });
 
 
-PaidJobs.allow({
+Featured.allow({
     insert: function(){
         return true;
     }
@@ -28,7 +28,7 @@ PaidJobs.allow({
 
 
 
-PaidJobsSchema = new SimpleSchema({
+FeaturedSchema = new SimpleSchema({
     title: {
         type: String,
         optional: true,
@@ -101,4 +101,4 @@ PaidJobsSchema = new SimpleSchema({
     }
 });
 
-PaidJobs.attachSchema(PaidJobsSchema);
+Featured.attachSchema(FeaturedSchema);

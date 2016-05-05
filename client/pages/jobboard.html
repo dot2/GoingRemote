@@ -4,7 +4,7 @@
     <div class="wrapper">
       <div class="summary">
         <h1>Reach remote workers across the globe.</h1>
-        <span class="promotion">Job posts are currently free for a limited time!</span>
+        <span class="promotion">$100 for 60 days in the featured list!</span>
         <a href="/postjob">
           <div class="post-job">
               <span>Post a job</span>
@@ -13,19 +13,18 @@
       </div>
       {{>TwitterFollow}}
        <!-- {{>Search}} -->
-      <div class="feat">
-           <h2>Featured</h2>
-      </div>
        {{#if Template.subscriptionsReady}}
-       {{#each paidjobs}}
-       {{>paidJob}}
+        <div class="feat">
+             <h2>Featured</h2>
+        </div>
+       {{#each featured}}
+       {{>featJobs}}
        {{/each}}
-       {{else}}
-       <div class="loading">
-           <span>Loading the featured jobs!</span>
-       </div>
        {{/if}}
       {{#if Template.subscriptionsReady}}
+      <div class="feat">
+           <h2>Latest</h2>
+      </div>
       {{#each jobs}}
       {{>job}}
       {{/each}}
