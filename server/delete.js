@@ -4,7 +4,7 @@ SyncedCron.add({
     name: "delete old jobs from DB",
 
     schedule: function(parser){
-        return parser.text('every 24 hours');
+        return parser.text('every 5 hours');
     },
     job: function(){
         return Meteor.call("deleteJobs");
@@ -16,7 +16,7 @@ Meteor.methods({
         var today = new Date();
         var targetDate = new Date();
 
-        targetDate.setDate(today.getDate() - 60);
+        targetDate.setDate(today.getDate() - 5);
         targetDate.setHours(0);
         targetDate.setMinutes(0);
         targetDate.setSeconds(0);

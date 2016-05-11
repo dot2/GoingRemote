@@ -4,7 +4,7 @@ SyncedCron.add({
     name: "get RemoteOk Jobs for DB",
 
     schedule: function(parser){
-        return parser.text('every  1 hours');
+        return parser.text('every  30 minutes');
     },
     job: function(){
         return Meteor.call("remoteOkJobs");
@@ -26,7 +26,6 @@ Meteor.methods({
                 company: job.company,
                 summary: job.description
             };
-
             var jobWithSameLink = Jobs.findOne({url: jobAttribues.url});
             var url = jobAttribues.url;
             if(url && jobAttribues.url && jobWithSameLink){
