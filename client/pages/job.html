@@ -1,14 +1,32 @@
 
 <template name="job">
-  <div class="job-list">
-    <div class="job">
-      <div class="job-info">
-        <div class="date-wrapper"><span class="date">{{formatDate createdAt}}</span></div><span class="job-title">{{title}}</span><span class="job-company">{{company}}</span>
-      </div>
-      <div class="job-apply">
-        <div class="apply"><a href="/jobpost/{{_id}}">  <span>Apply</span></a>
+    <div class="col-md-4 col-sm-6 col-xs-12 job-list">
+        <div class="job">
+             <a href="https://twitter.com/intent/tweet?text={{title}} http://goingremote.io/jobpost/{{_id}}&hashtags=remotejobs,remotework,digitalnomads" class="btn btn-twitter">
+                 <i class="fa fa-twitter"></i>
+            </a>
+            <div class="job-info">
+                <div class="date-wrapper">
+                    <span class="date">{{formatDate createdAt}}</span>
+                </div>
+                <span class="job-title">{{title}}</span>
+                <span class="job-company">{{company}}</span>
+                <div class="summary-container">
+                    <span class="job-summary">{{summary}}</span>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{{homeUrl}}{{url}}" target="_blank">
+                        <div class="apply">
+                            <p>Apply</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="job-link">
+                    <a href="/jobpost/{{_id}}">
+                        <span>View</span>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>

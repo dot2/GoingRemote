@@ -1,98 +1,198 @@
 @import 'var'
-.job-info
-    width: 80%
-.job-apply
-    width: 20%
-.job-list
-    width: 100%
-    margin: 8px
-    display: flex
-    align-items: center
-    justify-content: center
-.date-wrapper
-    width: 80px
-    height: 99px
-    border-right: solid
-    border-color: $gray
-    border-width: thin
-    display: flex
-    justify-content: center
-    align-items: center
-    .date
-        font-size: 1.2rem
-        text-align: center
-        color: $blue
 .job
-    max-width: 1000px
-    height: 100px !important
-    border: solid
-    border-color: $gray
-    border-width: thin
-    width: 90%
+    box-shadow: 0 0 15px $shadow
     position: relative
-    .post-date
+    display: flex
+    flex-direction: column
+    height: 400px
+    width: 350px
+    overflow: hidden
+    margin: 20px 25px
+    transition: all 0.3s ease
+    .job-info
+        padding: 10px
         display: flex
-        justify-content: center
-        align-items: center
-        background-color: #fff
-        border-right: solid
-        border-color: $gray
-        border-width: thin
-        color: $blue
-        font-size: 1.2rem
-        font-family: $font-main
-        height: 100%
-        width: 70px
-        img
-            width: 62px
-    .post-img
-        width: 70px
-    .job-title
-        position: absolute
-        font:
-            size: 1.2rem
-            family: $font-main
-        top: 20px
-        left: 85px
-        width: 70%
-        text-align: left
-        // text-overflow: hidden
-        // white-space: nowrap
-        // overlow: hidden
-    .job-company
-        position: absolute
-        font:
-            size: 1.1rem
-            family: $font-main
-        color: #909090
-        bottom: 20px
-        left: 85px
-    .apply
-        display: flex
-        align-items: center
-        justify-content: center
-        position: absolute
-        border-radius: 30px
-        right: 10px
-        top: 30px
-        bottom: 30px
-        width: 100px
-        background-color: $blue
-        transition: all 0.2s ease-in-out
-        i
-            color: #fff
-        span
-            color: #fff
-            font-size: 1.2rem
-            font-family: $font-main
-        a
-            display: flex
-            align-items: center
-            justify-content: center
-            text-decoration: none
+        flex-direction: column
+        .date-wrapper
+            text-align: center
+        .date
             width: 100%
+            cursor: default
+            text-align: center
+            color: $blue
+            font:
+                family: $font-main
+                size: 1.5rem
+                weight: bold
+        .job-link
+            text-align: center
+            margin-top: 5px
+            padding: 0px 20px
             height: 100%
-            &:hover
-                text-decoration: none
-        // &:hover
-            // box-shadow: 2px 2px 10px $shadow
+            span
+                font:
+                    family: $font-sec
+                    weight: 300
+                    size: .8rem
+                color: $gray
+        .job-title
+            overflow: hidden
+            cursor: pointer
+            text-align: center
+            height: 25px
+            margin-top: 15px
+            font:
+                family: $font-main
+                size: 1.2rem
+        .job-company
+            text-align: center
+            cursor: default
+            margin-top: 5px
+            font:
+                family: $font-sec
+                size: 1.1rem
+            color: $gray
+        .summary-container
+            overflow: hidden
+            margin-top: 20px
+            margin-bottom: 10px
+            height: 220px
+            cursor: default
+            .job-summary
+                align-items: left !important
+                text-align: left
+                cursor: default
+                font:
+                    family: $font-sec
+                    size: 1rem
+                    weight: 300
+    &:hover
+        box-shadow: 0 0 25px $shadow-hover
+.btn-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+.apply
+    z-index: 2
+    width: 200px
+    height: 40px
+    background-color: $blue
+    border-radius: 30px
+    box-shadow: 0 0 8px $shadow
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: all 0.3s ease
+    &:hover
+        box-shadow: 0 0 8px $shadow-hover
+    p
+        font:
+            family: $font-main
+            size: 1.2rem
+        color: #fff
+        padding: 0
+        margin: 0
+.btn.btn-twitter
+    color: #4099FF
+    position: absolute
+    font-size: 1.2rem
+    top: 5px
+    right: 10px
+// .job-info
+//     width: 80%
+// .job-apply
+//     width: 20%
+// .job-list
+//     width: 100%
+//     margin: 8px
+//     display: flex
+//     align-items: center
+//     justify-content: center
+// .date-wrapper
+//     width: 80px
+//     height: 99px
+//     border-right: solid
+//     border-color: $gray
+//     border-width: thin
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     .date
+//         font-size: 1.2rem
+//         text-align: center
+//         color: $blue
+// .job
+//     max-width: 1000px
+//     height: 100px !important
+//     border: solid
+//     border-color: $gray
+//     border-width: thin
+//     width: 90%
+//     position: relative
+//     .post-date
+//         display: flex
+//         justify-content: center
+//         align-items: center
+//         background-color: #fff
+//         border-right: solid
+//         border-color: $gray
+//         border-width: thin
+//         color: $blue
+//         font-size: 1.2rem
+//         font-family: $font-main
+//         height: 100%
+//         width: 70px
+//         img
+//             width: 62px
+//     .post-img
+//         width: 70px
+//     .job-title
+//         position: absolute
+//         font:
+//             size: 1.2rem
+//             family: $font-main
+//         top: 20px
+//         left: 85px
+//         width: 70%
+//         text-align: left
+//         // text-overflow: hidden
+//         // white-space: nowrap
+//         // overlow: hidden
+//     .job-company
+//         position: absolute
+//         font:
+//             size: 1.1rem
+//             family: $font-main
+//         color: #909090
+//         bottom: 20px
+//         left: 85px
+//     .apply
+//         display: flex
+//         align-items: center
+//         justify-content: center
+//         position: absolute
+//         border-radius: 30px
+//         right: 10px
+//         top: 30px
+//         bottom: 30px
+//         width: 100px
+//         background-color: $blue
+//         transition: all 0.2s ease-in-out
+//         i
+//             color: #fff
+//         span
+//             color: #fff
+//             font-size: 1.2rem
+//             font-family: $font-main
+//         a
+//             display: flex
+//             align-items: center
+//             justify-content: center
+//             text-decoration: none
+//             width: 100%
+//             height: 100%
+//             &:hover
+//                 text-decoration: none
+//         // &:hover
+//             // box-shadow: 2px 2px 10px $shadow

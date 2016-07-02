@@ -18,11 +18,11 @@ html,body
 header
     position: relative
     background:
-        image: url(../images/beach-header.png)
+        image: url(../images/header-img.png)
         repeat: no-repeat
         size: cover
         position: center
-    height: 30vh
+    height: 35vh
     display: flex
     flex-direction: column
     align-items: center
@@ -30,10 +30,20 @@ header
     h1
         font:
             family: $font-main
-            size: 5rem
+            size: 3.5rem
         margin: 0
         text-align: center
         color: #fff
+    span
+        margin-top: 5px
+        font:
+            family: $font-sec
+            size: 1.6rem
+            weight: 300
+        color: #fff
+        opacity: .8
+        text-align: center
+
 .title
     display: flex
     flex-direction: row
@@ -45,48 +55,47 @@ header
         height: 30px
         padding: 0
         margin: 0
-        margin-top: 15px
+        margin-top: 4px
         margin-left: 15px
 .nav
     z-index: 2
-    margin-top: 20px
-    max-width: 800px
+    position: absolute
+    top: 15px
+    right: 10px
     display: flex
     flex-direction: row
-    justify-content: space-between
     a
         text-decoration: none
         color: inherit
-        margin: 0 25px 0 25px
-        border-radius: 20px
+        margin: 0 15px
+        padding: 0 5px
     .main-btn
         span
             font:
-                family: $font-main
+                family: $font-sec
                 size: 1.5rem
-                weight: 200
+                weight: 300
         cursor: pointer
         padding: 2px 0
         color: #fff
-        width: 100px
-        border-radius: 20px
         text-align: center
-    #jobs
-        background-color: $blue
-    #places
-        background-color: $purple
-    #articles
-        background-color: $red
+#join
+    background-color: $blue
+    width: 80px
+    border-radius: 30px
+    box-shadow: 0 0 5px $shadow
 //personal branding
 .me
     color: #fff
     padding: 10px
-    font-size: 1rem
     i
         margin-right: 5px
         font-size: 1.2rem
     span
         padding: 2px
+        font:
+            family: $font-sec
+            size: 1.2rem
 .branding
     z-index: 2
     position: absolute
@@ -102,3 +111,54 @@ main
         position: relative
         padding-bottom: 5px
         color: #000
+//-------------------------------------------------
+ JOIN PAGE STYLES
+//-------------------------------------------------
+.join-wrapper
+    margin-top: 30px
+    .join-cta
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $blue
+        border-radius: 30px
+        width: 150px
+        height: 40px
+        color: #fff
+        font:
+            family: $font-main
+            size: 1.8rem
+        box-shadow: 0 0 10px $shadow
+.offset-bkg
+    background-color: $off-white
+    img
+        width: 75%
+.blue-bkg
+    background-color: $blue
+    img
+        width: 75%
+    p
+        color: #fff
+.purple-bkg
+    background-color: $purple
+.section
+    height: 60vh
+    padding: 15px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    text-align: center
+    .section-wrapper
+        max-width: 1000px
+    h2
+        font:
+            family: $font-main
+            size: 3rem
+        margin: 0
+        padding: 0
+    p
+        font:
+            family: $font-sec
+            size: 2rem
+        margin-top: 50px

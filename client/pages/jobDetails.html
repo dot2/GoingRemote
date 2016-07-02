@@ -1,28 +1,25 @@
 <template name="JobDetails">
-    {{>TwitterShare}}
-  <div class="postedOn"><span class="underline">Posted On</span>
-    <p>{{formatDate createdAt}}</p>
-    <a href="{{job.homeUrl}}{{job.url}}{{featured.homeUrl}}{{featured.url}}" target="_blank">
-        <div class="applyTo">
-            <p>Apply</p>
+    <div class="jobDetailsWrapper">
+        <div class="jobDetails">
+            <div class="postedOn">
+                <span class="underline">Posted On</span>
+                <span class="date">{{formatDate createdAt}}</span>
+            </div>
+            <span class="underline">Position</span>
+            <h1 class="job-title">{{job.title}}{{featured.title}}</h1>
+            <span class="underline">Company</span>
+            <h2>{{job.company}}{{featured.company}}</h2>
+            <span class="underline">Summary</span>
+            <div class="job-summary">
+                {{job.summary}}{{featured.summary}}
+            </div>
+            <div class="btn-wrapper">
+                <a href="{{job.homeUrl}}{{job.url}}{{featured.homeUrl}}{{featured.url}}" target="_blank">
+                    <div class="apply">
+                        <p>Apply</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </a>
-  </div>
-  <div class="jobDetailsWrapper">
-    <div class="jobDetails">
-        <span class="underline">Position</span>
-      <h1>{{job.title}}{{featured.title}}</h1>
-
-      <span class="underline">Company</span>
-      <h2>{{job.company}}{{featured.company}}</h2>
-      <span class="underline">Summary</span>
-      <div class="job-summary">
-          <div class="applyInstructions">
-              <p>{{featured.applyInstruction}}</p>
-              <p>{{featured.companyEmail}}</p>
-          </div>
-          {{job.summary}}{{featured.summary}}
-      </div>
     </div>
-  </div>
 </template>

@@ -2,32 +2,41 @@
 <template name="JobBoard">
   <body>
     <div class="wrapper">
+    <div class="summary-wrapper">
       <div class="summary">
         <h1>Reach remote workers across the globe.</h1>
-        <span class="promotion">$100 for 60 days in the featured list!</span>
+        <span class="promotion">Job post are $100 for 60 days in the featured list.</span>
         <a href="/postjob">
           <div class="post-job">
-              <span>Post a job</span>
+              <span>Post it!</span>
           </div>
       </a>
       </div>
-      {{>TwitterFollow}}
+    </div>
        <!-- {{>Search}} -->
        {{#if Template.subscriptionsReady}}
-        <div class="feat">
-             <h2>Featured</h2>
+        <div class="container">
+            <div class="feat">
+                 <h2>Featured</h2>
+            </div>
+           <div class="row">
+               {{#each featured}}
+               {{>featJobs}}
+               {{/each}}
+           </div>
         </div>
-       {{#each featured}}
-       {{>featJobs}}
-       {{/each}}
        {{/if}}
       {{#if Template.subscriptionsReady}}
-      <div class="feat">
-           <h2>Latest</h2>
-      </div>
-      {{#each jobs}}
-      {{>job}}
-      {{/each}}
+    <div class="container">
+        <div class="feat">
+             <h2>Latest</h2>
+        </div>
+        <div class="row">
+              {{#each jobs}}
+              {{>job}}
+              {{/each}}
+        </div>
+    </div>
       {{else}}
       <div class="loading">
           <span>Fetching those remote jobs =)</span>
