@@ -116,31 +116,52 @@ main
 //-------------------------------------------------
 .join-wrapper
     margin-top: 30px
-    .join-cta
-        display: flex
-        align-items: center
-        justify-content: center
-        background-color: $blue
-        border-radius: 30px
-        width: 150px
-        height: 40px
-        color: #fff
-        font:
-            family: $font-main
-            size: 1.8rem
-        box-shadow: 0 0 10px $shadow
+.join-cta, .cta
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $blue
+    border-radius: 30px
+    width: 150px
+    height: 40px
+    color: #fff
+    font:
+        family: $font-main
+        size: 1.8rem
+    box-shadow: 0 0 10px $shadow
+.cta-wrapper
+    margin-top: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+.cta
+    background-color: #000 !important
 .offset-bkg
     background-color: $off-white
     img
         width: 75%
 .blue-bkg
     background-color: $blue
+.purple-bkg
+    background-color: $purple
+    h2
+        color: #fff
+    h3
+        margin-top: 20px
+        color: #fff
+        font:
+            family: $font-main
+            size: 1.8rem
+    p
+        font:
+            family: $font-sec
+            weight: 300
+        margin-top: 10px !important
+.blue-bkg, .purple-bkg
     img
         width: 75%
     p
         color: #fff
-.purple-bkg
-    background-color: $purple
 .section
     height: 60vh
     padding: 15px
@@ -154,11 +175,22 @@ main
     h2
         font:
             family: $font-main
-            size: 3rem
+            size: 2rem
         margin: 0
         padding: 0
     p
         font:
             family: $font-sec
-            size: 2rem
+            size: 1.8rem
         margin-top: 50px
+.profile-images
+    margin-top: 30px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    img
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        margin: 0px 10px
