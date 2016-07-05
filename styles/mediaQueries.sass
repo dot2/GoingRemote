@@ -2,13 +2,19 @@
 @media screen and (min-width: 775px)
     #overflow
         display: none
-
 //IPAD STYLES
 @media screen and (max-width: 770px)
+    .join-desktop
+        display: none !important
+    .join-outro-text
+        font-size: 1.2rem !important
+    .heading-outro-text
+        font-size: 1.5rem !important
     header
-        height: 6vh !important
+        height: 8vh !important
         align-items: left !important
         flex-direction: row !important
+        box-shadow: 0 0 10px $shadow
         overflow: hidden
         h1
             font-size: 2.8rem !important
@@ -27,7 +33,7 @@
             a
                 margin: 0
                 padding: 0
-            #join
+            #join, .join-cta
                 display: flex
                 justify-content: center
                 align-items: center
@@ -35,7 +41,6 @@
                 box-shadow: none
                 height: 100%
             #overflow
-                display: flex
                 margin: 0 20px
                 padding: 0
                 height: 100%
@@ -102,6 +107,7 @@
         box-shadow: 0 0 10px $shadow
     .feat
         display: none
+
 //IPHONE 6 STYLES
 @media screen and (max-width: 380px)
     .container
