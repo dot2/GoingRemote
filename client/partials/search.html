@@ -1,24 +1,30 @@
 <template name="Search">
-    <div class="group">
-        {{> EasySearch.Input index=jobIndex }}
-            <span class="bar"></span>
-            <label>Search Jobs</label>
-    </div>
-
-    {{#EasySearch.Each index=jobIndex}}
-        {{>job}}
-    {{/EasySearch.Each}}
-    {{> EasySearch.LoadMore index=jobIndex}}
-
-        {{#EasySearch.IfSearching index=jobIndex}}
-            <div class="loading">
-                <span>Fetching those awesome jobs now! =)</span>
-            </div>
-        {{/EasySearch.IfSearching}}
-
-    {{#EasySearch.IfNoResults index=jobIndex}}
-        <div class="no-results">
-            <span>Sorry, no jobs fit that search =(</span>
+    <div id="search-popup">
+        <div id="exit">
+            <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-    {{/EasySearch.IfNoResults}}
+            <div class="group">
+                <div class="search-bar">
+                    {{> EasySearch.Input index=jobIndex class="search-input" placeholder="Search"}}
+                    <span>Search..</span>
+                </div>
+            </div>
+
+            {{#EasySearch.Each index=jobIndex}}
+                {{>job}}
+            {{/EasySearch.Each}}
+            {{> EasySearch.LoadMore index=jobIndex}}
+
+                {{#EasySearch.IfSearching index=jobIndex}}
+                    <div class="loading">
+                        <span>Fetching those awesome jobs now! =)</span>
+                    </div>
+                {{/EasySearch.IfSearching}}
+
+            {{#EasySearch.IfNoResults index=jobIndex}}
+                <div class="no-results">
+                    <span>Sorry, no jobs fit that search =(</span>
+                </div>
+            {{/EasySearch.IfNoResults}}
+    </div>
 </template>

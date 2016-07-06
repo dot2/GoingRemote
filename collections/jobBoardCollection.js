@@ -1,23 +1,23 @@
 Jobs = new Meteor.Collection('jobs');
 
-// JobIndex = new EasySearch.Index({
-//     collection: Jobs,
-//     fields: ['title', 'company'],
-//     engine: new EasySearch.Minimongo()
-// });
+JobIndex = new EasySearch.Index({
+    collection: Jobs,
+    fields: ['title', 'company'],
+    engine: new EasySearch.Minimongo()
+});
 
-// JobIndex = new EasySearch.Index({
-//     engine: new EasySearch.MongoDB({
-//         sort: function () {
-//             return {createdAt: -1};
-//         }
-//     }),
-//     collection: Jobs,
-//     fields: ['_id','title', 'company'],
-//     defaultSearchOption: {
-//         limit: 10
-//     }
-// });
+JobIndex = new EasySearch.Index({
+    engine: new EasySearch.MongoDB({
+        sort: function () {
+            return {createdAt: -1};
+        }
+    }),
+    collection: Jobs,
+    fields: ['_id','title', 'company'],
+    defaultSearchOption: {
+        limit: 10
+    }
+});
 
 //
 // Jobs.allow({

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="65px" height="16px" viewBox="0 0 65 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Popular</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Popular">
+            <rect id="Rectangle-125" fill="#9370DB" x="0" y="0" width="65" height="16" rx="8"></rect>
+            <text id="Featured" font-family="Roboto-Regular, Roboto" font-size="8" font-weight="normal" letter-spacing="1.33333337" fill="#FFFFFF">
+                <tspan x="17.3561196" y="11">Featured</tspan>
+            </text>
+            <g id="Icon" transform="translate(6.565657, 3.333333)" fill="#FAFAFA">
+                <path d="M5.90121212,5.77533333 C5.90121212,5.77533333 5.48888889,5.08733333 4.93474747,5.006 C4.38060606,4.92466667 1.97888889,5.47866667 1.97888889,5.47866667 C1.97888889,5.47866667 1.39257576,5.33266667 1.28292929,4.896 C1.2770202,4.87266667 1.27045455,4.84733333 1.26454545,4.82266667 L1.26454545,8.68333333 C1.26454545,9.042 0.981565657,9.33333333 0.632272727,9.33333333 C0.282979798,9.33333333 0,9.042 0,8.68333333 L0,0.649333333 C0,0.290666667 0.282979798,0 0.632272727,0 C0.981565657,0 1.26454545,0.290666667 1.26454545,0.649333333 L1.26454545,0.800666667 C1.65782828,1.028 2.25858586,1.21933333 3.14823232,1.15133333 C5.08772727,1.00266667 6.16712121,0.642 7.00358586,1.09933333 C7.84070707,1.558 7.87878788,2.00733333 7.87878788,2.00733333 L5.90121212,5.77533333 L5.90121212,5.77533333 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

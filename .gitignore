@@ -45,7 +45,7 @@ Temporary Items
 .meteor/local
 
 # meteor settings file
-settings.json
+
 
 # meteor build output files
 *.tar.gz

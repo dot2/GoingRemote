@@ -2,8 +2,23 @@
 @media screen and (min-width: 775px)
     #overflow
         display: none
+    .join-mobile
+        display: none !important
+    .mobile-icon
+        display: none
 //IPAD STYLES
 @media screen and (max-width: 770px)
+    .title
+        h1
+            display: none
+        .fav-icon
+            display: none
+        .mobile-icon
+            height: 20%
+            width: 20%
+    #search-popup
+        left: 0 !important
+        right: 0 !important
     .join-desktop
         display: none !important
     .join-outro-text
@@ -15,7 +30,6 @@
         align-items: left !important
         flex-direction: row !important
         box-shadow: 0 0 10px $shadow
-        overflow: hidden
         h1
             font-size: 2.8rem !important
         .title
@@ -26,8 +40,15 @@
                 width: 25px
                 height: 25px
                 margin-top: 0
+        #home-btn
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100%
+            margin-right: 10px
         .nav
             height: 100%
+            display: flex
             top: 0px
             right: 0
             a
@@ -44,6 +65,7 @@
                 margin: 0 20px
                 padding: 0
                 height: 100%
+                display: flex
             .main-btn
                 span
                     font:
@@ -74,6 +96,9 @@
 
 //NEXUS 6P STYLES
 @media screen and (max-width: 435px)
+    .group
+        margin-left: 0 !important
+        width: 100% !important
     header
         h1
             font-size: 2rem !important
@@ -101,15 +126,6 @@
                         size: 1.5rem !important
     .summary-wrapper
         display: none
-    .job
-        margin: 5px 0
-        width: 100%
-        box-shadow: 0 0 10px $shadow
-    .feat
-        display: none
-
-//IPHONE 6 STYLES
-@media screen and (max-width: 380px)
     .container
         padding: 0 !important
     .job
@@ -118,6 +134,20 @@
         border-width: thin
         border-color: $light-gray
         margin: 0
+        width: 100%
+        &:hover
+            box-shadow: none !important
+    .feat
+        display: none
+    .section p
+        font-size: 1.2rem !important
+    .section h2
+        font-size: 1.8rem !important
+
+//IPHONE 6 STYLES
+@media screen and (max-width: 380px)
+    .container
+        padding: 0 !important
     .btn.btn-twitter
         font-size: 1.5rem
     .feat
