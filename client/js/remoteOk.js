@@ -5,3 +5,8 @@
 //     console.log("remoteOkJobs res", result);
 //    }
 //   });
+// var summary = getElementByID('.summary');
+// var regex = /(<([^>]+)>)/ig;
+// var result = body.replace(regex, "");
+//
+// alert(result);
